@@ -16,8 +16,6 @@ import (
 )
 
 // CreateEsIndexCleaner returns a new cronjob for the Elasticsearch Index Cleaner operation
-
-// CreateEsIndexCleaner returns a new cronjob for the Elasticsearch Index Cleaner operation
 func CreateEsIndexCleaner(jaeger *v1.Jaeger) *batchv1beta1.CronJob {
 	esUrls := util.GetEsHostname(jaeger.Spec.Storage.Options.Map())
 	trueVar := true
